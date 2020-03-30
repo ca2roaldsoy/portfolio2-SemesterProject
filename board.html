@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="description" content="Play a game of thrones board game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Game of Thrones Board Game</title>
+</head>
+
+<body id="gameBoard">
+
+    <div class="players">
+
+        <h1 class="player1">Player:</h1>
+        <p class="playerName"></p>
+
+        <h1 class="goal">GOAL</h1>
+        <p class="sum">8 Turns</p>
+
+    </div>
+
+    <div id="dice">
+        <img class="dice__eyes" id="diceNr" src="images/Dice/1x/Dice1.png" alt="dice nr1">
+        <button id="diceRoll" style="top: 50px; left: 20px">Roll Dice</button>
+    </div>
+
+    <div class="container [ jumbo ]">
+        <div class="jumbotron">
+            <h3 class="jumboTitle"></h3>
+            <img>
+            <p class="jumboText"></p>
+            <button role="button" class="btn [ jumbo__closeBtn ]" id="closeBtn"></button>
+        </div>
+    </div>
+    
+    <section id="board"></section>
+    
+    <div class="playerScore" id="playerScore" data-name="playerScore" data-id=2></div>
+    
+    <button type="submit" class="btn btnBack" role="button" id="backBtn">Back to <br>Character Select</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="board.js"></script>
+</body>
+</html>

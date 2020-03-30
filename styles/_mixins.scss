@@ -1,0 +1,312 @@
+@import "variables"; 
+
+//Background Images
+@mixin backgrImg () {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+//Token Image on Board
+@mixin tokenImg ($marginTop: 0px) {
+    
+    background-size: 175px 175px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: $marginTop;
+    margin-left: -5px;
+}
+
+@mixin characterToken () {
+    
+    .arya-stark {
+        
+        background-image: $arya_stark;
+        @include tokenImg(-10px);
+    }
+    
+    .sansa-stark {
+        
+        background-image: $sansa_stark;
+        @include tokenImg(-10px);
+    }
+    
+    .eddard-stark {
+        
+        background-image: $eddard_stark;
+        @include tokenImg(-10px);
+    }
+    
+    .jon-snow {
+        
+        background-image: $jon_snow;
+        @include tokenImg(-10px);
+    }
+    
+    .jaime-lannister {
+        
+        background-image: $jaime_lannister;
+        @include tokenImg(-10px);
+    }
+    
+    .tyrion-lannister {
+        
+        background-image: $tyrion_lannister;
+        @include tokenImg(-10px);
+    }
+    
+    .joffrey-baratheon {
+        
+        background-image: $joffrey_bara;
+        @include tokenImg(-10px);
+    }
+    
+    .robert-baratheon {
+        
+        background-image: $robert_bara;
+        @include tokenImg(-10px);
+    }
+    
+    .daenerys-targaryen{
+        
+        background-image: $daenny_targ;
+        @include tokenImg();
+    }
+    
+    .theon-greyjoy {
+        
+        background-image: $theon_grey;
+        @include tokenImg();
+    }
+}
+
+//Game Board
+@mixin gameBoard () {
+    
+    .box {
+        
+        background-color: rgba(0, 0, 0, 0.9);
+        border: 3px solid $white;
+        font-family: $dutch-mediaeval-pro;
+        font-weight: 400;
+        @include backgrImg ();
+    }
+    
+    #tile0 {
+        
+        background-color: $green;
+        border: none;
+        color: $white;
+        background-image: url('../images/Icons/arrow_icon.png');
+        background-size: contain;
+        background-position: center;
+        padding-top: 10px;
+        
+    } 
+    
+    #tile15 {
+        
+        background: none;
+        border: none;
+        color: $white;
+        padding-top: 10px;
+        background-color: $green;
+    }
+    
+    #tile11, #tile28 {
+        
+        background: none;
+        border: none;
+        background-color: $red;
+        color: $white;
+    }
+
+    #tile5 {
+    
+        background-color: rgba(0, 0, 0, 0);
+        background-image: $baratheon;
+        border: none;
+    }
+    
+    #tile7 {
+        
+        background-color: rgba(0, 0, 0, 0);
+        background-image: $greyjoy;
+        border: none;
+    }
+    
+    #tile20 {
+        
+        background-color: rgba(0, 0, 0, 0);
+        background-image: $stark;
+        border: none;
+    }
+    
+     #tile24 {
+        
+        background-color: rgba(0, 0, 0, 0);
+        background-image: $targaryen;
+        border: none;
+    }
+    
+     #tile27 {
+        
+        background-color: rgba(0, 0, 0, 0);
+        background-image: $lannister;
+        border: none;
+    }
+    
+    #tile30 {
+        
+        border: none;
+        background-image: $crown;
+        background-size: 70px 50px;
+        background-color: $black;
+            
+    }
+}
+        
+// Media Queries
+
+@mixin media () {
+
+    /******************** Screen 768 px ******************/
+    
+    @media only screen and (min-width: 768px) { 
+        
+        .card {
+            
+            padding: 15px;
+            margin: 15px;
+            width: 200px;
+            height: 65vh;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        
+        .card-title {
+            
+            font-size: 18px;
+        }
+        
+        .card-text:first-line {
+            
+            font-size: 18px;
+        }
+        
+         #banner {
+            
+             width: 100%;
+             height: auto;
+             margin: 0;
+             padding: 0;
+        }
+        
+        .btnPlay {
+
+            font-size: 24px;
+            height: auto;
+            max-width: 200px;
+            right: 0;
+            margin: 0 auto;
+            display: inline-block;
+
+        }
+        
+        .playerScore {
+            
+            width: 40%;
+            text-align: center;
+        }
+        
+        .header__logo {
+            
+            width: 20em;
+            height: 250px;
+        }
+    }
+
+     /******************** Screen 1200 px ****************/
+    
+    @media only screen and (min-width: 1200px) { 
+        
+        .card {
+            
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            height: 65vh;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        
+        .card-text:first-line {
+            
+            font-size: 16px;
+        }
+        
+        #banner {
+            
+            margin-left: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .playerScore {
+            
+            align-self: center;
+            margin-top: 150px;
+            width: 20%;
+        }
+        
+        .tokenImg {
+    
+            width: 250px;
+            height: 250px;
+            align-self: center;
+            margin-top: 50px;
+    
+        }
+        
+        #scoreBtn {
+            
+             margin-top: 150px;
+        }
+        
+        .btnPlay {
+
+            height: 80px;
+            font-size: 32px;
+            position: fixed;
+            left: 34%;
+            background-image: url(../images/Icons/arrow_icon.png);
+            background-position: 25px 10px;
+            background-repeat: no-repeat;
+            background-size: 150px 30px;
+            background-color: rgba(0,0,0,0.9);
+            display: inline-block;
+            padding-top: 35px;
+
+             &:hover {
+
+                background-color: rgba(0,0,0,0.9);
+                animation: backgrpos .5s linear infinite alternate;
+            
+                @keyframes backgrpos {
+                
+                    to {
+                    
+                        background-position: 25px 15px;
+                    }
+                }   
+            }
+        }
+        
+        .header__logo {
+            
+            width: 20em;
+            height: 250px;
+        }
+    }
+}

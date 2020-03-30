@@ -1,0 +1,642 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#select_character {
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 42px;
+  border-radius: 50px;
+  border: 1px solid;
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000000;
+  padding: 10px;
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  font-family: Open Sans;
+}
+
+/***************************    Characters Token  ***************************/
+#select_character {
+  background-image: url(../images/Background/index_backgrImg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.characters {
+  height: auto;
+  color: #000000;
+}
+.characters__token--img {
+  margin-top: 20px;
+}
+.characters__token--img:hover {
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px #ffffff;
+  animation: backgrglow 1.5s linear infinite alternate;
+}
+@keyframes backgrglow {
+  to {
+    box-shadow: 0px 0px 20px 20px #C4450A;
+  }
+}
+
+/***************************    Cards  ***************************/
+.card-title {
+  margin-bottom: 20px;
+  font-size: 7vw;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
+}
+
+.card {
+  padding: 30px;
+  margin: 25px 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 4vw;
+  color: #ffffff;
+  font-family: "Open Sans", "Verdana", sans-serif;
+}
+
+.card-text:first-line {
+  font-size: 18px;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type=radio]:checked + .glow {
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px 50px #748F00;
+  animation: glow 1.5s linear infinite alternate;
+}
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 20px 20px #748F00;
+  }
+}
+
+.tokens {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/************ Buttons **************************/
+.btnPlay {
+  position: fixed;
+  bottom: 0;
+  left: 30%;
+  z-index: 2;
+  display: block;
+  width: 40vw;
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  font-size: 24px;
+  background-color: #C4450A;
+  color: #ffffff;
+}
+.btnPlay:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #C4450A;
+}
+
+.btnBack {
+  height: 12vh;
+  width: 160px;
+  font-size: 18px;
+  top: 350px;
+  position: relative;
+  left: 50px;
+  background-image: url(../images/Icons/arrow_icon_backw.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.btnBack:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #AD6B00;
+  animation: backArrow 0.5s linear infinite alternate;
+}
+@keyframes backArrow {
+  to {
+    background-position: 0 20px;
+  }
+}
+
+/***************************    Game Board  ***************************/
+#gameBoard {
+  background-image: url(../images/Background/board_backgrImg_v2.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gameBoard .box {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px solid #ffffff;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
+  font-weight: 400;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gameBoard #tile0 {
+  background-color: #748F00;
+  border: none;
+  color: #ffffff;
+  background-image: url("../images/Icons/arrow_icon.png");
+  background-size: contain;
+  background-position: center;
+  padding-top: 10px;
+}
+#gameBoard #tile15 {
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding-top: 10px;
+  background-color: #748F00;
+}
+#gameBoard #tile11, #gameBoard #tile28 {
+  background: none;
+  border: none;
+  background-color: #C20C0C;
+  color: #ffffff;
+}
+#gameBoard #tile5 {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/sigils/baratheon.png);
+  border: none;
+}
+#gameBoard #tile7 {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/sigils/Greyjoy.png);
+  border: none;
+}
+#gameBoard #tile20 {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/sigils/Stark.png);
+  border: none;
+}
+#gameBoard #tile24 {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/sigils/Targaryen.png);
+  border: none;
+}
+#gameBoard #tile27 {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/sigils/Lannister.png);
+  border: none;
+}
+#gameBoard #tile30 {
+  border: none;
+  background-image: url(../images/Icons/1x/crown.png);
+  background-size: 70px 50px;
+  background-color: #000000;
+}
+
+.box {
+  font-size: 100%;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/************ Dice ***************/
+#dice {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  top: 450px;
+  left: 165px;
+  font-family: "dutch-mediaeval-pro", "Rockwell", serif;
+}
+
+#dice img {
+  width: 20%;
+  height: auto;
+}
+
+#dice #diceRoll {
+  position: absolute;
+  transform: translate(-35%, -225%);
+  background-color: #C4450A;
+  color: white;
+  font-size: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+#dice #diceRoll:hover {
+  background-color: #748F00;
+}
+
+/************ Players ***************/
+.players {
+  display: flex;
+  justify-content: center;
+}
+
+.player1 {
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  color: #ffffff;
+}
+
+.playerName {
+  position: absolute;
+  left: 300px;
+  top: 125px;
+  font-size: 40px;
+  color: #C4450A;
+}
+
+.playerScore {
+  width: 80%;
+  height: auto;
+  color: #ffffff;
+  font-size: 72px;
+  z-index: 5;
+  text-align: center;
+  display: none;
+  background-color: rgba(255, 31, 31, 0.8);
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+
+.goal {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+  color: #ffffff;
+}
+
+.sum {
+  position: absolute;
+  right: 280px;
+  top: 115px;
+  font-size: 40px;
+  color: #C4450A;
+}
+.sum::first-letter {
+  color: #748F00;
+  font-size: 70px;
+}
+
+.token__1 {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+}
+
+/******* Display Character Position ********/
+.tileGlow {
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 5px #C4450A;
+  animation: tileGlow 1.5s linear infinite alternate;
+}
+@keyframes tileGlow {
+  to {
+    box-shadow: 0px 0px 0px 0px #C20C0C;
+  }
+}
+
+/****** Jumbotrone ******/
+.jumbo {
+  display: none;
+}
+
+.jumbotron {
+  width: 80%;
+  height: 90%;
+  position: fixed;
+  z-index: 3;
+  top: 30px;
+  left: 200px;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: 0.5s;
+  text-align: center;
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  border: 1px solid #C4450A;
+}
+
+.jumboTitle {
+  font-size: 32px;
+}
+
+.jumboText {
+  text-align: left;
+  order: 3;
+  width: 60%;
+}
+
+.jumboImg {
+  order: 2;
+  width: 60%;
+  margin: 25px auto;
+}
+
+.jumbo__closeBtn {
+  order: 4;
+  width: 10%;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/***************************    Player tokens on game board  ***************************/
+.arya-stark {
+  background-image: url(../images/Tokens/arya_stark_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.sansa-stark {
+  background-image: url(../images/Tokens/sansa_stark_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.eddard-stark {
+  background-image: url(../images/Tokens/eddard_stark_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.jon-snow {
+  background-image: url(../images/Tokens/jon_snow_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.jaime-lannister {
+  background-image: url(../images/Tokens/jaime_lannister_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.tyrion-lannister {
+  background-image: url(../images/Tokens/tyrion_lannister_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.joffrey-baratheon {
+  background-image: url(../images/Tokens/joffrey_baratheon_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.robert-baratheon {
+  background-image: url(../images/Tokens/robert_baratheon_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.daenerys-targaryen {
+  background-image: url(../images/Tokens/daenerys_targaryen_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0px;
+  margin-left: -5px;
+}
+
+.theon-greyjoy {
+  background-image: url(../images/Tokens/theon_greyjoy_token.png);
+  background-size: 175px 175px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0px;
+  margin-left: -5px;
+}
+
+/************ Winner Page ***************/
+#winner {
+  background-image: url(../images/Background/flame_backgr_2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+#winnerText {
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.tokenImg {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#scoreBtn, #playAgainBtn {
+  max-width: 50%;
+  height: auto;
+  margin: 40px auto;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #ffffff;
+}
+
+#playAgainBtn {
+  background-color: rgba(0, 128, 0, 0.8);
+}
+
+.header {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  border-bottom: 5px dashed gray;
+}
+.header__logo {
+  width: 45vw;
+  height: auto;
+  margin: 50px auto;
+  display: block;
+}
+
+/***************************    Media Queris  ***************************/
+/******************** Screen 768 px ******************/
+@media only screen and (min-width: 768px) {
+  .card {
+    padding: 15px;
+    margin: 15px;
+    width: 200px;
+    height: 65vh;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-text:first-line {
+    font-size: 18px;
+  }
+
+  #banner {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btnPlay {
+    font-size: 24px;
+    height: auto;
+    max-width: 200px;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .playerScore {
+    width: 40%;
+    text-align: center;
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+}
+/******************** Screen 1200 px ****************/
+@media only screen and (min-width: 1200px) {
+  .card {
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    height: 65vh;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .card-text:first-line {
+    font-size: 16px;
+  }
+
+  #banner {
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+
+  .playerScore {
+    align-self: center;
+    margin-top: 150px;
+    width: 20%;
+  }
+
+  .tokenImg {
+    width: 250px;
+    height: 250px;
+    align-self: center;
+    margin-top: 50px;
+  }
+
+  #scoreBtn {
+    margin-top: 150px;
+  }
+
+  .btnPlay {
+    height: 80px;
+    font-size: 32px;
+    position: fixed;
+    left: 34%;
+    background-image: url(../images/Icons/arrow_icon.png);
+    background-position: 25px 10px;
+    background-repeat: no-repeat;
+    background-size: 150px 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: inline-block;
+    padding-top: 35px;
+  }
+  .btnPlay:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: backgrpos 0.5s linear infinite alternate;
+  }
+  @keyframes backgrpos {
+    to {
+      background-position: 25px 15px;
+    }
+  }
+
+  .header__logo {
+    width: 20em;
+    height: 250px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

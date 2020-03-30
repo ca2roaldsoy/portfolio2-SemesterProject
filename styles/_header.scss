@@ -1,0 +1,18 @@
+@import "variables";
+
+.header {
+    
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    border-bottom: 5px dashed gray;
+    
+    &__logo {
+        
+        width: 45vw;
+        height: auto;
+        margin: 50px auto;
+        display: block;
+       
+    }
+}
