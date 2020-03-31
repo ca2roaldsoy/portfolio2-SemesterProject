@@ -1,0 +1,17 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// font medieval sharp
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+
+@import "partials/_blocktags";
+@import "partials/_variables";
+@import "partials/_main";
+@import "partials/_header";
+@import "partials/_mixins";
+/***************************    Media Queris  ***************************/
+@include media();
