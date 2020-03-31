@@ -2,27 +2,24 @@
 @import "mixins";
 
 #select_character {
-    
-    font-family: $dutch-mediaeval-pro;
+  font-family: $dutch-mediaeval-pro;
 }
 
 h2 {
-    
-    text-align: center;
-    font-size: 42px;
-    border-radius: 50px;
-    border: 1px solid;
-    width: 90%;
-    max-width: 450px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: $black;
-    padding: 10px;
+  text-align: center;
+  font-size: 42px;
+  border-radius: 50px;
+  border: 1px solid;
+  width: 90%;
+  max-width: 450px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: $black;
+  padding: 10px;
 }
 
 main {
-    
-    text-align: center;
-    margin: 0 auto;
-    font-family: Open Sans;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Open Sans;
 }

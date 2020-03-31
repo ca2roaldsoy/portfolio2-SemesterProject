@@ -23,24 +23,26 @@ function CharCard({ id, image, alt }) {
   }
 
   return (
-    <Col as="section" sm={4} lg={3} className="[ characters ]">
-      <Form.Group as={Col}>
-        <Form.Label className="[ characters__container ] card">
-          <Form.Check
-            disabled
-            type="radio"
-            name="token"
-            className="[ characters__token ]"
-          />
-          <Card.Img variant="top" src={image} alt={alt} />
-          <Card.Body>
-            <Card.Title className="text-center">{character.name}</Card.Title>
-            <Card.Text className="text-center">
-              Title: {character.titles}
-            </Card.Text>
-          </Card.Body>
-        </Form.Label>
-      </Form.Group>
+    <Col as="section" sm={6} md={4} lg={3} className="[ characters ]">
+      <Form.Label className="[ characters__container ] card">
+        <Form.Check
+          type="radio"
+          name="token"
+          className="[ characters__token ]"
+        />
+        <Card.Img
+          variant="top"
+          src={image}
+          alt={alt}
+          className="img-responsive [ characters__token--img ] img-fluid"
+        />
+        <Card.Body>
+          <Card.Title className="text-center">{character.name}</Card.Title>
+          <Card.Text className="text-center">
+            Title: {character.titles}
+          </Card.Text>
+        </Card.Body>
+      </Form.Label>
     </Col>
   );
 }

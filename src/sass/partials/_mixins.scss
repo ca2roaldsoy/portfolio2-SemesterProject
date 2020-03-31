@@ -145,16 +145,20 @@
 // Media Queries
 
 @mixin media() {
-  /******************** Screen 768 px ******************/
+  /******************** Screen 576 px ******************/
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 576px) {
+    .characters {
+      padding-left: 0;
+    }
+
     .card {
       padding: 15px;
       margin: 15px;
       width: 200px;
       height: 65vh;
       font-size: 16px;
-      margin-left: 20px;
+      margin-left: 30px;
     }
 
     .card-title {
@@ -256,7 +260,7 @@
     }
 
     .header__logo {
-      width: 20em;
+      width: 15em;
       height: 250px;
     }
   }

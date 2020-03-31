@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { CharTokens } from "./CharTokens";
 import CharCard from "./CharCard";
 import Row from "react-bootstrap/Row";
@@ -14,14 +14,15 @@ function Home() {
   }
 
   return (
-    <div id="select_character">
+    <div>
       <header role="banner" className="container-fluid [ header ]">
         <img src={Logo.src} alt={Logo.alt} className="[ header__logo ]" />
       </header>
       <div className="container tokens">
-        <main role="main">
-          <Row id="banner">{characterToken()}</Row>
-        </main>
+        <h2 className="text-center">Select a Token</h2>
+        <Row id="banner" as="main" role="main">
+          {characterToken()}
+        </Row>
       </div>
     </div>
   );
