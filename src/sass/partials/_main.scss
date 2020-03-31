@@ -3,65 +3,56 @@
 
 /***************************    Characters Token  ***************************/
 #select_character {
-            
-    background-image: url(../images/Background/index_backgrImg.jpg);
-    @include backgrImg ();
-}    
+  background-image: url(../../images/Background/index_backgrImg.jpg);
+  @include backgrImg();
+}
 
 .characters {
+  height: auto;
+  color: $black;
 
-    height: auto;
-    color: $black;
+  &__token--img {
+    margin-top: 20px;
 
-    &__token--img {
-            
-        margin-top: 20px;
-      
-        &:hover {
-            
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0px 0px 10px 10px $white;
-            animation: backgrglow 1.5s linear infinite alternate;
-            
-            @keyframes backgrglow {
-                
-                to {
-                    
-                    box-shadow: 0px 0px 20px 20px $orange;
-                }
-            }   
+    &:hover {
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px 10px $white;
+      animation: backgrglow 1.5s linear infinite alternate;
+
+      @keyframes backgrglow {
+        to {
+          box-shadow: 0px 0px 20px 20px $orange;
         }
+      }
     }
+  }
 }
 
 /***************************    Cards  ***************************/
 .card-title {
-    
-    margin-bottom: 20px;
-    font-size: 7vw;
-    font-family: $dutch-mediaeval-pro;
+  margin-bottom: 20px;
+  font-size: 7vw;
+  font-family: $dutch-mediaeval-pro;
 }
 
 .card {
-    
-    padding: 30px;
-    margin: 25px 50px;
-    background-color: rgba(0, 0, 0, 0.8);
-    @include backgrImg ();
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 4vw;
-    color: $white;
-    font-family: $openSans
+  padding: 30px;
+  margin: 25px 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  @include backgrImg();
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 4vw;
+  color: $white;
+  font-family: $openSans;
 }
 
 .card-text:first-line {
-            
-    font-size: 18px;
+  font-size: 18px;
 }
 
-[type=radio] { 
+[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -69,280 +60,242 @@
 }
 
 //Selecting card
-input[type=radio]:checked + .glow {
-  
-    border-radius: 50%;
-    box-shadow: 0px 0px 50px 50px $green;
-    animation: glow 1.5s linear infinite alternate;
-            
-        @keyframes glow {
-                
-            to {
-                    
-                box-shadow: 0px 0px 20px 20px $green;
-            }
-        }   
+input[type="radio"]:checked + .glow {
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px 50px $green;
+  animation: glow 1.5s linear infinite alternate;
+
+  @keyframes glow {
+    to {
+      box-shadow: 0px 0px 20px 20px $green;
+    }
+  }
 }
 
 .tokens {
-    
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /************ Buttons **************************/
 
 .btnPlay {
-    
-    position: fixed;
-    bottom: 0;
-    left: 30%;
-    z-index: 2;
-    display: block;
-    width: 40vw;
-    height: 50px;
-    border-radius: 5px 5px 0 0;
-    font-size: 24px;
-    background-color: $orange;
-    color: $white;
-    
-    &:hover {
-        
-        cursor: pointer;
-        background-color: $white;
-        color: $orange;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 30%;
+  z-index: 2;
+  display: block;
+  width: 40vw;
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  font-size: 24px;
+  background-color: $orange;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $white;
+    color: $orange;
+  }
 }
 
 .btnBack {
-    
-    height: 12vh;
-    width: 160px;
-    font-size: 18px;
-    top: 350px;
-    position: relative;
-    left: 50px;
-    background-image: url(../images/Icons/arrow_icon_backw.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: rgba(0,0,0,0);
-    text-align: center;
+  height: 12vh;
+  width: 160px;
+  font-size: 18px;
+  top: 350px;
+  position: relative;
+  left: 50px;
+  background-image: url(../../images/Icons/arrow_icon_backw.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
 
-        &:hover {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: $brown;
+    animation: backArrow 0.5s linear infinite alternate;
 
-            background-color: rgba(0,0,0,0);
-            color: $brown;
-            animation: backArrow .5s linear infinite alternate;
-            
-            @keyframes backArrow {
-        
-            to {
-                    
-               background-position: 0 20px;
-            }
-        }   
+    @keyframes backArrow {
+      to {
+        background-position: 0 20px;
+      }
     }
+  }
 }
 
 /***************************    Game Board  ***************************/
 #gameBoard {
-    
-   background-image: 
-        url(../images/Background/board_backgrImg_v2.png);
-    background-attachment: fixed;
-    @include gameBoard();
-    @include backgrImg ()
-    
+  background-image: url(../../images/Background/board_backgrImg_v2.png);
+  background-attachment: fixed;
+  @include gameBoard();
+  @include backgrImg();
 }
 
 .box {
-    
-    font-size: 100%;
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    text-align: center;
-    border-radius: 10px;
+  font-size: 100%;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
 }
 
 /************ Dice ***************/
 #dice {
-
-    position: relative;
-    max-width: 400px;
-    margin: auto;
-    top: 450px;
-    left: 165px;
-    font-family: $dutch-mediaeval-pro;
-    
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  top: 450px;
+  left: 165px;
+  font-family: $dutch-mediaeval-pro;
 }
 
 #dice img {
-    
-    width: 20%;
-    height: auto;    
+  width: 20%;
+  height: auto;
 }
 
 #dice #diceRoll {
-    
-    position: absolute;
-    transform: translate(-35%, -225%);
-    background-color: $orange;
-    color: white;
-    font-size: 20px;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    border: none;
-    
-    &:hover {
-        
-        background-color: $green;
-    }
-    
+  position: absolute;
+  transform: translate(-35%, -225%);
+  background-color: $orange;
+  color: white;
+  font-size: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background-color: $green;
+  }
 }
 
 /************ Players ***************/
 
 .players {
-    
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .player1 {
-    
-    position: absolute;
-    left: 300px;
-    top: 50px;
-    color: $white;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  color: $white;
 }
 
 .playerName {
-    
-    position: absolute;
-    left: 300px;
-    top: 125px;
-    font-size: 40px;
-    color: $orange;
+  position: absolute;
+  left: 300px;
+  top: 125px;
+  font-size: 40px;
+  color: $orange;
 }
 
 .playerScore {
-    
-    width: 80%;
-    height: auto;
-    color: $white;
-    font-size: 72px;
-    z-index: 5;
-    text-align: center;
-    display: none;
-    background-color: rgba(255, 31, 31, 0.8);
-    margin: 0 auto;
-    margin-top: 50px;
-    border-radius: 50px;
+  width: 80%;
+  height: auto;
+  color: $white;
+  font-size: 72px;
+  z-index: 5;
+  text-align: center;
+  display: none;
+  background-color: rgba(255, 31, 31, 0.8);
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 50px;
 }
 
 .goal {
-    
-    position: absolute;
-    right: 300px;
-    top: 50px;
-    color: $white;
+  position: absolute;
+  right: 300px;
+  top: 50px;
+  color: $white;
 }
 
 .sum {
-    
-    position: absolute;
-    right: 280px;
-    top: 115px;
-    font-size: 40px;
-    color: $orange;
-    
-    &::first-letter {
-        
-        color: $green;
-        font-size: 70px;
-    }
+  position: absolute;
+  right: 280px;
+  top: 115px;
+  font-size: 40px;
+  color: $orange;
+
+  &::first-letter {
+    color: $green;
+    font-size: 70px;
+  }
 }
 
 .token__1 {
-    
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    position: relative;
-    bottom: 20px;
-    right: 10px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: relative;
+  bottom: 20px;
+  right: 10px;
 }
 
 /******* Display Character Position ********/
 .tileGlow {
-    
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px 5px $orange;
-    animation: tileGlow 1.5s linear infinite alternate;
-            
-        @keyframes tileGlow {
-                
-            to {
-                    
-                box-shadow: 0px 0px 0px 0px $red;
-            }
-        }   
-}
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 5px $orange;
+  animation: tileGlow 1.5s linear infinite alternate;
 
+  @keyframes tileGlow {
+    to {
+      box-shadow: 0px 0px 0px 0px $red;
+    }
+  }
+}
 
 /****** Jumbotrone ******/
 
 .jumbo {
-    
-    display: none;
+  display: none;
 }
 
 .jumbotron {
-    
-    width: 80%;
-    height: 90%;
-    position: fixed;
-    z-index: 3;
-    top: 30px;
-    left: 200px;
-    background-color: rgba(0, 0, 0, .95);
-    transition: 0.5s;
-    text-align: center;
-    color: $white;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    border: 1px solid $orange;
+  width: 80%;
+  height: 90%;
+  position: fixed;
+  z-index: 3;
+  top: 30px;
+  left: 200px;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: 0.5s;
+  text-align: center;
+  color: $white;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  border: 1px solid $orange;
 }
 
 .jumboTitle {
-    
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .jumboText {
-    
-    text-align: left;
-    order: 3;
-    width: 60%;
+  text-align: left;
+  order: 3;
+  width: 60%;
 }
 
 .jumboImg {
-    
-    order: 2;
-    width: 60%;
-    margin: 25px auto;
+  order: 2;
+  width: 60%;
+  margin: 25px auto;
 }
 
 .jumbo__closeBtn {
-    
-    order: 4;
-    width: 10%;
-    margin-top: 25px;
-    font-size: 18px;
+  order: 4;
+  width: 10%;
+  margin-top: 25px;
+  font-size: 18px;
 }
 
 /***************************    Player tokens on game board  ***************************/
@@ -350,50 +303,45 @@ input[type=radio]:checked + .glow {
 
 /************ Winner Page ***************/
 #winner {
-    
-    background-image: url(../images/Background/flame_backgr_2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
+  background-image: url(../../images/Background/flame_backgr_2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 }
 
 #winnerText {
-    
-    width: 100%;
-    height: auto;
-    color: $white;
-    font-size: 72px;
-    text-align: center;
-    margin-top: 100px;
-    background-color: rgba(255, 0, 0, 0.4);
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 .tokenImg {
-    
-    width: 200px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 50px;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-#scoreBtn, #playAgainBtn {
-    
-    max-width: 50%;
-    height: auto;
-    margin: 40px auto;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(255, 0, 0, 0.8);
-    color: $white;
-    
+#scoreBtn,
+#playAgainBtn {
+  max-width: 50%;
+  height: auto;
+  margin: 40px auto;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: $white;
 }
 
 #playAgainBtn {
-    
-    background-color: rgba(0, 128, 0, 0.8);
+  background-color: rgba(0, 128, 0, 0.8);
 }
