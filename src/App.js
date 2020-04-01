@@ -1,9 +1,9 @@
 import React from "react";
 import "./sass/style.scss";
-import Home from "../src/components/home/Home";
+import GameNav from "./components/navigation/GameNav";
 
 function App() {
-  return <Home />;
+  return <GameNav />;
 }
 
 export default App;

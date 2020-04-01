@@ -2,7 +2,9 @@ import React from "react";
 import { CharTokens } from "./CharTokens";
 import CharCard from "./CharCard";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 import { Logo } from "../../constants/logo";
+import { Link } from "react-router-dom";
 
 function Home() {
   function characterToken() {
@@ -23,6 +25,11 @@ function Home() {
         <Row id="banner" as="main" role="main">
           {characterToken()}
         </Row>
+        <Link to="../gameBoard/GameBoard">
+          <Button type="submit" className="btnPlay" id="playBtn" role="button">
+            Play Game
+          </Button>
+        </Link>
       </div>
     </div>
   );

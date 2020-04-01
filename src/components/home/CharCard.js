@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { GoTApi } from "../../constants/api";
 
@@ -24,8 +23,6 @@ function CharCard({ id, image, alt, name }) {
   }
 
   let selection = document.querySelector("input[name='token']:checked");
-  console.log(selection);
-
   const handleStorage = () => {
     //Save to Local Storage
     localStorage.setItem("player", name);
@@ -58,10 +55,6 @@ function CharCard({ id, image, alt, name }) {
           </Card.Body>
         </Form.Label>
       </Col>
-
-      <Button type="submit" className="btnPlay" id="playBtn" role="button">
-        Play Game
-      </Button>
     </>
   );
 }
