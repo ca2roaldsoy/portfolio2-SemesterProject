@@ -7,7 +7,6 @@ import { GoTApi } from "../../constants/api";
 
 function CharCard({ id, image, alt, name }) {
   const [character, setCharacter] = useState([]);
-  let [selected, setSelected] = useState(false);
   const url = GoTApi + id;
 
   useEffect(() => {
@@ -40,7 +39,7 @@ function CharCard({ id, image, alt, name }) {
             type="radio"
             name="token"
             className="[ characters__token ]"
-            defaultChecked={selected ? "checked" : !selected}
+            defaultChecked
           />
           <Card.Img
             variant="top"
@@ -60,11 +59,9 @@ function CharCard({ id, image, alt, name }) {
         </Form.Label>
       </Col>
 
-      <Col>
-        <Button type="submit" className="btnPlay" id="playBtn" role="button">
-          Play Game
-        </Button>
-      </Col>
+      <Button type="submit" className="btnPlay" id="playBtn" role="button">
+        Play Game
+      </Button>
     </>
   );
 }
