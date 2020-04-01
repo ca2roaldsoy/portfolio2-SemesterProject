@@ -14,70 +14,60 @@ export const CharTokens = [
     id: 148,
     src: AryaStark,
     alt: "Arya Stark",
-    "data-name": "Arya Stark",
-    "data-id": 1
+    name: "Arya Stark"
   },
   {
     id: 583,
     src: JonSnow,
     alt: "Jon Snow",
-    "data-name": "Jon Snow",
-    "data-id": 1
+    name: "Jon Snow"
   },
   {
     id: 957,
     src: SansaStark,
     alt: "Sansa Stark",
-    "data-name": "Sansa Stark",
-    "data-id": 1
+    name: "Sansa Stark"
   },
   {
     id: 338,
     src: EddardStark,
     alt: "Eddard Stark",
-    "data-name": "Eddard Stark",
-    "data-id": 1
+    name: "Eddard Stark"
   },
   {
     id: 529,
     src: JamieLannister,
     alt: "Jaime Lannister",
-    "data-name": "Jaime Lannister",
-    "data-id": 1
+    name: "Jaime Lannister"
   },
   {
     id: 1052,
     src: TyrionLannister,
     alt: "Tyrion Lannister",
-    "data-name": "Tyrion Lannister",
-    "data-id": 1
+    name: "Tyrion Lannister"
   },
   {
     id: 565,
     src: JoffreyBaratheon,
     alt: "Joffrey Baratheon",
-    "data-name": "Joffrey Baratheon",
-    "data-id": 1
+    name: "Joffrey Baratheon"
   },
   {
     id: 901,
     src: RobertBaratheon,
     alt: "Robert Baratheon",
-    "data-name": "Robert Baratheon",
-    "data-id": 1
+    name: "Robert Baratheon"
   },
   {
     id: 1022,
     src: TheonGreyjoy,
     alt: "Theon Greyjoy",
-    "data-name": "Theon Greyjoy",
-    "data-id": 1
+    name: "Theon Greyjoy"
   },
   {
     id: 1303,
     src: Daenerys,
     alt: "Daenerys Targaryen",
-    "data-name": "Daenerys Targaryen",
-    "data-id": 1
+    name: "Daenerys Targaryen"
   }
 ];

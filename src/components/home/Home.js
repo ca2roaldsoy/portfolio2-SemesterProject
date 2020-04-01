@@ -7,9 +7,9 @@ import { Logo } from "../../constants/logo";
 function Home() {
   function characterToken() {
     return CharTokens.map(charToken => {
-      const { id, src, alt } = charToken;
+      const { id, src, alt, name } = charToken;
 
-      return <CharCard id={id} key={id} image={src} alt={alt} />;
+      return <CharCard id={id} key={id} image={src} alt={alt} name={name} />;
     });
   }
 
